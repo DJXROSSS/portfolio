@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>All Projects — Designer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        :root {
+            --bg: #e0e5ec;
+            --card-bg: #e0e5ec;
+            --text: #1f2937;
+            --muted: #6b7280;
+            --muted-2: #4b5563;
+            --shadow-light: #d1d9e6;
+            --shadow-dark: #ffffff;
+        }
+        .theme-dark {
+            --bg: #0b0b0c;
+            --card-bg: #121213;
+            --text: #e6e6e6;
+            --muted: #9a9a9a;
+            --muted-2: #8a8a8a;
+            --shadow-light: rgba(255,255,255,0.03);
+            --shadow-dark: rgba(0,0,0,0.6);
+        }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--text); transition: background-color 200ms ease, color 200ms ease; }
+        .bg-theme { background-color: var(--card-bg) !important; }
+        .neuro-shadow { box-shadow: 8px 8px 16px var(--shadow-light), -8px -8px 16px var(--shadow-dark); background-color: var(--card-bg); }
+        .neuro-inset { box-shadow: inset 4px 4px 8px var(--shadow-light), inset -4px -4px 8px var(--shadow-dark); background-color: var(--card-bg); }
+        .neuro-hover { transition: all 0.3s ease; }
+        .neuro-hover:hover { transform: translateY(-4px); }
+        .neuro-press-hover { transition: all 0.18s ease; }
+        .neuro-press-hover:hover, .neuro-press-hover:focus, .neuro-press-hover:focus-visible {
+            box-shadow: inset 3px 3px 6px var(--shadow-light), inset -3px -3px 6px var(--shadow-dark);
+            transform: none;
+        }
+        .neuro-button { box-shadow: 6px 6px 12px var(--shadow-light), -6px -6px 12px var(--shadow-dark); background-color: var(--card-bg); }
+        .neuro-button:active { box-shadow: inset 3px 3px 6px var(--shadow-light), inset -3px -3px 6px var(--shadow-dark); }
+        .theme-dark .text-gray-900 { color: var(--text) !important; }
+        .theme-dark .text-gray-800 { color: var(--text) !important; }
+        .theme-dark .text-gray-700 { color: var(--muted-2) !important; }
+        .theme-dark .text-gray-600 { color: var(--muted) !important; }
+    </style>
+</head>
+<body class="text-gray-800">
+    <nav class="px-6 py-6 lg:px-12 lg:py-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="neuro-shadow rounded-3xl px-8 py-5 bg-theme">
+                <div class="flex items-center justify-between">
+                    <div class="text-2xl font-semibold tracking-tight text-gray-800">JK</div>
+                    <div class="hidden md:flex items-center gap-8">
+                        <a href="main.html" class="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Home</a>
+                        <a href="education.html" class="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Education</a>
+                        <a href="experience.html" class="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Experience</a>
+                        <a href="certifications.html" class="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Certifications</a>
+                        <a href="projects.html" class="text-sm font-medium text-gray-900 transition-colors">Projects</a>
+                    </div>
+                    <button id="theme-toggle" aria-label="Toggle theme" class="neuro-button rounded-full w-10 h-10 flex items-center justify-center bg-theme hidden md:flex">
+                        <i data-lucide="sun" class="w-5 h-5 text-gray-700"></i>
+                    </button>
+                    <button type="button" title="Menu" class="neuro-button rounded-full w-10 h-10 flex items-center justify-center bg-theme md:hidden">
+                        <i data-lucide="menu" class="w-5 h-5 text-gray-700"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="px-6 py-8 lg:px-12 lg:py-12">
+        <div class="max-w-7xl mx-auto">
+            <div class="neuro-shadow rounded-3xl p-8 bg-theme">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <h1 class="text-3xl lg:text-4xl font-semibold text-gray-900">All Projects</h1>
+                        <p class="mt-2 text-gray-600">A gallery of projects — click any card to view details.</p>
+                    </div>
+                    <a href="index.html" class="neuro-button neuro-hover rounded-2xl px-4 py-2 bg-theme text-gray-900">Back</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="px-6 pb-20 lg:px-12">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <a href="project-ecommerce.html" class="neuro-shadow rounded-3xl p-6 bg-theme neuro-hover cursor-pointer block">
+                    <div class="neuro-inset rounded-2xl overflow-hidden mb-4 bg-theme">
+                        <img src="https://images.unsplash.com/photo-1618004912476-29818d81ae2e?w=1000&h=700&fit=crop" alt="E-Commerce Platform" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="flex gap-2 mb-3">
+                        <span class="neuro-inset rounded-lg px-2 py-1 text-xs bg-theme text-gray-700">UI/UX</span>
+                        <span class="neuro-inset rounded-lg px-2 py-1 text-xs bg-theme text-gray-700">Web</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900">E-Commerce Platform</h3>
+                    <p class="text-gray-600 mt-2">Redesign focused on conversion and user journey.</p>
+                </a>
+
+                <a href="project-fitness.html" class="neuro-shadow rounded-3xl p-6 bg-theme neuro-hover cursor-pointer block">
+                    <div class="neuro-inset rounded-2xl overflow-hidden mb-4 bg-theme">
+                        <img src="https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?w=1000&h=700&fit=crop" alt="Fitness Tracking App" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="flex gap-2 mb-3">
+                        <span class="neuro-inset rounded-lg px-2 py-1 text-xs bg-theme text-gray-700">Mobile</span>
+                        <span class="neuro-inset rounded-lg px-2 py-1 text-xs bg-theme text-gray-700">Health</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900">Fitness Tracking App</h3>
+                    <p class="text-gray-600 mt-2">Mobile-first experience for health tracking.</p>
+                </a>
+
+                <a href="project-analytics.html" class="neuro-shadow rounded-3xl p-6 bg-theme neuro-hover cursor-pointer block">
+                    <div class="neuro-inset rounded-2xl overflow-hidden mb-4 bg-theme">
+                        <img src="https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=1000&h=700&fit=crop" alt="Analytics Dashboard" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="flex gap-2 mb-3">
+                        <span class="neuro-inset rounded-lg px-2 py-1 text-xs bg-theme text-gray-700">SaaS</span>
+                        <span class="neuro-inset rounded-lg px-2 py-1 text-xs bg-theme text-gray-700">Data</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900">Analytics Dashboard</h3>
+                    <p class="text-gray-600 mt-2">Data visualization for product teams.</p>
+                </a>
+
+                <a href="project-coffee.html" class="neuro-shadow rounded-3xl p-6 bg-theme neuro-hover cursor-pointer block">
+                    <div class="neuro-inset rounded-2xl overflow-hidden mb-4 bg-theme">
+                        <img src="https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?w=1000&h=700&fit=crop" alt="Coffee Brand Identity" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="flex gap-2 mb-3">
+                        <span class="neuro-inset rounded-lg px-2 py-1 text-xs bg-theme text-gray-700">Branding</span>
+                        <span class="neuro-inset rounded-lg px-2 py-1 text-xs bg-theme text-gray-700">Identity</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900">Coffee Brand Identity</h3>
+                    <p class="text-gray-600 mt-2">Branding and packaging for artisan coffee.</p>
+                </a>
+
+                <a href="project-wallet.html" class="neuro-shadow rounded-3xl p-6 bg-theme neuro-hover cursor-pointer block">
+                    <div class="neuro-inset rounded-2xl overflow-hidden mb-4 bg-theme">
+                        <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=1000&h=700&fit=crop" alt="Mobile Wallet" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="flex gap-2 mb-3">
+                        <span class="neuro-inset rounded-lg px-2 py-1 text-xs bg-theme text-gray-700">Fintech</span>
+                        <span class="neuro-inset rounded-lg px-2 py-1 text-xs bg-theme text-gray-700">Mobile</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900">Mobile Wallet</h3>
+                    <p class="text-gray-600 mt-2">Simple payments flow with strong visual design.</p>
+                </a>
+
+                <a href="project-saas.html" class="neuro-shadow rounded-3xl p-6 bg-theme neuro-hover cursor-pointer block">
+                    <div class="neuro-inset rounded-2xl overflow-hidden mb-4 bg-theme">
+                        <img src="https://images.unsplash.com/photo-1503602642458-232111445657?w=1000&h=700&fit=crop" alt="SaaS Landing" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="flex gap-2 mb-3">
+                        <span class="neuro-inset rounded-lg px-2 py-1 text-xs bg-theme text-gray-700">Landing</span>
+                        <span class="neuro-inset rounded-lg px-2 py-1 text-xs bg-theme text-gray-700">Marketing</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900">SaaS Landing</h3>
+                    <p class="text-gray-600 mt-2">Marketing site and onboarding flows.</p>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="px-6 py-12 lg:px-12">
+        <div class="max-w-7xl mx-auto">
+            <div class="neuro-shadow rounded-3xl p-8 bg-theme">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                    <div class="text-2xl font-semibold tracking-tight text-gray-800">JK</div>
+                    <div class="text-sm text-gray-600">© 2025 All rights reserved.</div>
+                    <div class="flex gap-4">
+                        <a href="#" class="neuro-button neuro-press-hover rounded-full w-10 h-10 flex items-center justify-center bg-theme">
+                            <i data-lucide="twitter" class="w-4 h-4 text-gray-700"></i>
+                        </a>
+                        <a href="#" class="neuro-button neuro-press-hover rounded-full w-10 h-10 flex items-center justify-center bg-theme">
+                            <i data-lucide="instagram" class="w-4 h-4 text-gray-700"></i>
+                        </a>
+                        <a href="#" class="neuro-button neuro-press-hover rounded-full w-10 h-10 flex items-center justify-center bg-theme">
+                            <i data-lucide="github" class="w-4 h-4 text-gray-700"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="projectPage.js"></script>
+</body>
+</html>

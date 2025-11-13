@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Platform — Project Details</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        :root {
+            --bg: #e0e5ec;
+            --card-bg: #e0e5ec;
+            --text: #1f2937;
+            --muted: #6b7280;
+            --muted-2: #4b5563;
+            --shadow-light: #d1d9e6;
+            --shadow-dark: #ffffff;
+        }
+        .theme-dark {
+            --bg: #0b0b0c;
+            --card-bg: #121213;
+            --text: #e6e6e6;
+            --muted: #9a9a9a;
+            --muted-2: #8a8a8a;
+            --shadow-light: rgba(255,255,255,0.03);
+            --shadow-dark: rgba(0,0,0,0.6);
+        }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--text); transition: background-color 200ms ease, color 200ms ease; }
+        .bg-theme { background-color: var(--card-bg) !important; }
+        .neuro-shadow { box-shadow: 8px 8px 16px var(--shadow-light), -8px -8px 16px var(--shadow-dark); background-color: var(--card-bg); }
+        .neuro-inset { box-shadow: inset 4px 4px 8px var(--shadow-light), inset -4px -4px 8px var(--shadow-dark); background-color: var(--card-bg); }
+        .neuro-hover { transition: all 0.3s ease; }
+        .neuro-hover:hover { transform: translateY(-2px); }
+        .neuro-press-hover { transition: all 0.18s ease; }
+        .neuro-press-hover:hover, .neuro-press-hover:focus, .neuro-press-hover:focus-visible {
+            box-shadow: inset 3px 3px 6px var(--shadow-light), inset -3px -3px 6px var(--shadow-dark);
+            transform: none;
+        }
+        .neuro-button { box-shadow: 6px 6px 12px var(--shadow-light), -6px -6px 12px var(--shadow-dark); background-color: var(--card-bg); }
+        .neuro-button:active { box-shadow: inset 3px 3px 6px var(--shadow-light), inset -3px -3px 6px var(--shadow-dark); }
+        .theme-dark .text-gray-900 { color: var(--text) !important; }
+        .theme-dark .text-gray-800 { color: var(--text) !important; }
+        .theme-dark .text-gray-700 { color: var(--muted-2) !important; }
+        .theme-dark .text-gray-600 { color: var(--muted) !important; }
+        .theme-dark .text-gray-500 { color: var(--muted) !important; }
+    </style>
+</head>
+<body class="text-gray-800">
+    <nav class="px-6 py-6 lg:px-12 lg:py-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="neuro-shadow rounded-3xl px-8 py-5 bg-theme">
+                <div class="flex items-center justify-between">
+                    <div class="text-2xl font-semibold tracking-tight text-gray-800">JK</div>
+                    <div class="hidden md:flex items-center gap-8">
+                        <a href="main.html" class="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Home</a>
+                        <a href="projectPage.html" class="text-sm font-medium text-gray-900 transition-colors">Projects</a>
+                        <a href="#contact" class="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Contact</a>
+                    </div>
+                    <button id="theme-toggle" aria-label="Toggle theme" class="neuro-button rounded-full w-10 h-10 flex items-center justify-center bg-theme hidden md:flex">
+                        <i data-lucide="sun" class="w-5 h-5 text-gray-700"></i>
+                    </button>
+                    <button aria-label="Toggle menu" class="neuro-button rounded-full w-10 h-10 flex items-center justify-center bg-theme md:hidden">
+                        <i data-lucide="menu" class="w-5 h-5 text-gray-700"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="px-6 py-8 lg:px-12 lg:py-12">
+        <div class="max-w-7xl mx-auto">
+            <div class="neuro-shadow rounded-3xl p-8 bg-theme">
+                <div class="flex items-center justify-between mb-8">
+                    <a href="projectPage.html" class="neuro-button neuro-hover rounded-2xl px-4 py-2 bg-theme text-gray-900 flex items-center gap-2">
+                        <i data-lucide="arrow-left" class="w-4 h-4 text-gray-700"></i>
+                        <span>Back to Projects</span>
+                    </a>
+                    <div class="flex gap-2">
+                        <span class="neuro-inset rounded-lg px-3 py-1 text-xs bg-theme text-gray-700">UI/UX</span>
+                        <span class="neuro-inset rounded-lg px-3 py-1 text-xs bg-theme text-gray-700">Web Design</span>
+                        <span class="neuro-inset rounded-lg px-3 py-1 text-xs bg-theme text-gray-700">2023</span>
+                    </div>
+                </div>
+                <h1 class="text-4xl lg:text-5xl font-semibold text-gray-900 mb-4">E-Commerce Platform Redesign</h1>
+                <p class="text-xl text-gray-600 leading-relaxed">A complete redesign of a modern e-commerce platform focused on improving conversion rates and enhancing the overall user journey through intuitive design patterns and seamless interactions.</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="px-6 pb-20 lg:px-12 lg:pb-32">
+        <div class="max-w-7xl mx-auto space-y-12">
+            <!-- Hero Image -->
+            <div class="neuro-shadow rounded-3xl p-6 bg-theme">
+                <div class="neuro-inset rounded-2xl overflow-hidden bg-theme">
+                    <img src="https://images.unsplash.com/photo-1618004912476-29818d81ae2e?w=1600&h=900&fit=crop" alt="E-Commerce Platform" class="w-full h-auto">
+                </div>
+            </div>
+
+            <!-- Project Overview -->
+            <div class="grid lg:grid-cols-3 gap-8">
+                <div class="lg:col-span-2 space-y-8">
+                    <div class="neuro-shadow rounded-3xl p-8 bg-theme">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="neuro-button rounded-full w-12 h-12 flex items-center justify-center bg-theme">
+                                <i data-lucide="info" class="w-5 h-5 text-gray-700"></i>
+                            </div>
+                            <h2 class="text-2xl font-semibold text-gray-900">Project Overview</h2>
+                        </div>
+                        <div class="space-y-4 text-gray-600 leading-relaxed">
+                            <p>This project involved a comprehensive redesign of an existing e-commerce platform that was experiencing declining conversion rates and high cart abandonment. The goal was to create a modern, user-friendly shopping experience that would increase sales and improve customer satisfaction.</p>
+                            <p>Through extensive user research and competitive analysis, we identified key pain points in the existing design and developed solutions that addressed both business objectives and user needs.</p>
+                        </div>
+                    </div>
+
+                    <div class="neuro-shadow rounded-3xl p-8 bg-theme">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="neuro-button rounded-full w-12 h-12 flex items-center justify-center bg-theme">
+                                <i data-lucide="target" class="w-5 h-5 text-gray-700"></i>
+                            </div>
+                            <h2 class="text-2xl font-semibold text-gray-900">The Challenge</h2>
+                        </div>
+                        <div class="space-y-4">
+                            <p class="text-gray-600 leading-relaxed">The existing platform had several critical issues:</p>
+                            <div class="space-y-3">
+                                <div class="neuro-inset rounded-xl px-6 py-4 bg-theme">
+                                    <div class="flex items-start gap-3">
+                                        <div class="neuro-button rounded-full w-8 h-8 flex items-center justify-center bg-theme flex-shrink-0 mt-1">
+                                            <span class="text-sm font-semibold text-gray-900">1</span>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-semibold text-gray-900 mb-1">High Cart Abandonment</h4>
+                                            <p class="text-sm text-gray-600">72% of users were abandoning their carts before completing purchase</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="neuro-inset rounded-xl px-6 py-4 bg-theme">
+                                    <div class="flex items-start gap-3">
+                                        <div class="neuro-button rounded-full w-8 h-8 flex items-center justify-center bg-theme flex-shrink-0 mt-1">
+                                            <span class="text-sm font-semibold text-gray-900">2</span>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-semibold text-gray-900 mb-1">Poor Mobile Experience</h4>
+                                            <p class="text-sm text-gray-600">Mobile users reported difficulty navigating and completing purchases</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="neuro-inset rounded-xl px-6 py-4 bg-theme">
+                                    <div class="flex items-start gap-3">
+                                        <div class="neuro-button rounded-full w-8 h-8 flex items-center justify-center bg-theme flex-shrink-0 mt-1">
+                                            <span class="text-sm font-semibold text-gray-900">3</span>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-semibold text-gray-900 mb-1">Outdated Visual Design</h4>
+                                            <p class="text-sm text-gray-600">The interface felt dated and didn't reflect the brand's modern positioning</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="neuro-shadow rounded-3xl p-8 bg-theme">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="neuro-button rounded-full w-12 h-12 flex items-center justify-center bg-theme">
+                                <i data-lucide="lightbulb" class="w-5 h-5 text-gray-700"></i>
+                            </div>
+                            <h2 class="text-2xl font-semibold text-gray-900">The Solution</h2>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed mb-6">We developed a comprehensive redesign strategy focusing on:</p>
+                        <div class="space-y-4">
+                            <div class="flex items-start gap-3">
+                                <div class="neuro-inset rounded-full w-2 h-2 mt-2 bg-theme flex-shrink-0"></div>
+                                <p class="text-gray-600">Streamlined checkout process reducing steps from 6 to 3</p>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="neuro-inset rounded-full w-2 h-2 mt-2 bg-theme flex-shrink-0"></div>
+                                <p class="text-gray-600">Mobile-first responsive design with touch-optimized interactions</p>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="neuro-inset rounded-full w-2 h-2 mt-2 bg-theme flex-shrink-0"></div>
+                                <p class="text-gray-600">Modern visual language with improved typography and spacing</p>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="neuro-inset rounded-full w-2 h-2 mt-2 bg-theme flex-shrink-0"></div>
+                                <p class="text-gray-600">Enhanced product discovery with smart filtering and recommendations</p>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="neuro-inset rounded-full w-2 h-2 mt-2 bg-theme flex-shrink-0"></div>
+                                <p class="text-gray-600">Improved accessibility meeting WCAG 2.1 AA standards</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-8">
+                    <div class="neuro-shadow rounded-3xl p-8 bg-theme">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="neuro-button rounded-full w-12 h-12 flex items-center justify-center bg-theme">
+                                <i data-lucide="briefcase" class="w-5 h-5 text-gray-700"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-900">Project Info</h3>
+                        </div>
+                        <div class="space-y-4">
+                            <div>
+                                <p class="text-sm text-gray-600 mb-1">Client</p>
+                                <p class="font-medium text-gray-900">RetailCo Inc.</p>
+                            </div>
+                            <div class="neuro-inset h-px bg-theme"></div>
+                            <div>
+                                <p class="text-sm text-gray-600 mb-1">Timeline</p>
+                                <p class="font-medium text-gray-900">4 months</p>
+                            </div>
+                            <div class="neuro-inset h-px bg-theme"></div>
+                            <div>
+                                <p class="text-sm text-gray-600 mb-1">My Role</p>
+                                <p class="font-medium text-gray-900">Lead Designer</p>
+                            </div>
+                            <div class="neuro-inset h-px bg-theme"></div>
+                            <div>
+                                <p class="text-sm text-gray-600 mb-1">Year</p>
+                                <p class="font-medium text-gray-900">2023</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="neuro-shadow rounded-3xl p-8 bg-theme">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="neuro-button rounded-full w-12 h-12 flex items-center justify-center bg-theme">
+                                <i data-lucide="trending-up" class="w-5 h-5 text-gray-700"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-900">Results</h3>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="neuro-inset rounded-xl p-4 bg-theme text-center">
+                                <div class="text-3xl font-semibold text-gray-900 mb-1">45%</div>
+                                <p class="text-sm text-gray-600">Increase in Conversions</p>
+                            </div>
+                            <div class="neuro-inset rounded-xl p-4 bg-theme text-center">
+                                <div class="text-3xl font-semibold text-gray-900 mb-1">38%</div>
+                                <p class="text-sm text-gray-600">Reduced Cart Abandonment</p>
+                            </div>
+                            <div class="neuro-inset rounded-xl p-4 bg-theme text-center">
+                                <div class="text-3xl font-semibold text-gray-900 mb-1">4.8/5</div>
+                                <p class="text-sm text-gray-600">User Satisfaction Score</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="neuro-shadow rounded-3xl p-8 bg-theme">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="neuro-button rounded-full w-12 h-12 flex items-center justify-center bg-theme">
+                                <i data-lucide="wrench" class="w-5 h-5 text-gray-700"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-900">Tools Used</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="neuro-inset rounded-lg px-3 py-2 text-sm bg-theme text-gray-700">Figma</span>
+                            <span class="neuro-inset rounded-lg px-3 py-2 text-sm bg-theme text-gray-700">Adobe XD</span>
+                            <span class="neuro-inset rounded-lg px-3 py-2 text-sm bg-theme text-gray-700">Photoshop</span>
+                            <span class="neuro-inset rounded-lg px-3 py-2 text-sm bg-theme text-gray-700">Maze</span>
+                            <span class="neuro-inset rounded-lg px-3 py-2 text-sm bg-theme text-gray-700">Hotjar</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Images -->
+            <div class="neuro-shadow rounded-3xl p-8 bg-theme">
+                <h2 class="text-2xl font-semibold text-gray-900 mb-6">Design Showcase</h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="neuro-inset rounded-2xl overflow-hidden bg-theme">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop" alt="Design Detail 1" class="w-full h-auto">
+                    </div>
+                    <div class="neuro-inset rounded-2xl overflow-hidden bg-theme">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop" alt="Design Detail 2" class="w-full h-auto">
+                    </div>
+                </div>
+            </div>
+            <div class="neuro-shadow rounded-3xl p-8 bg-theme">
+                <div class="flex items-center justify-between mb-6">
+                    <h2 class="text-2xl font-semibold text-gray-900">Next Project</h2>
+                    <a href="projectPage.html" class="text-sm font-medium text-gray-600 hover:text-gray-900">View All</a>
+                </div>
+                <a href="projectPage.html" class="neuro-inset rounded-2xl p-6 bg-theme block neuro-hover">
+                    <div class="grid md:grid-cols-3 gap-6 items-center">
+                        <div class="neuro-shadow rounded-xl overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?w=400&h=300&fit=crop" alt="Fitness App" class="w-full h-48 object-cover">
+                        </div>
+                        <div class="md:col-span-2">
+                            <div class="flex gap-2 mb-3">
+                                <span class="neuro-inset rounded-lg px-2 py-1 text-xs bg-theme text-gray-700">Mobile</span>
+                                <span class="neuro-inset rounded-lg px-2 py-1 text-xs bg-theme text-gray-700">Health</span>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Fitness Tracking App</h3>
+                            <p class="text-gray-600">Mobile-first experience for health and wellness tracking.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="px-6 py-12 lg:px-12">
+        <div class="max-w-7xl mx-auto">
+            <div class="neuro-shadow rounded-3xl p-8 bg-theme">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                    <div class="text-2xl font-semibold tracking-tight text-gray-800">JK</div>
+                    <div class="text-sm text-gray-600">© 2025 All rights reserved.</div>
+                    <div class="flex gap-4">
+                        <a href="#" class="neuro-button neuro-press-hover rounded-full w-10 h-10 flex items-center justify-center bg-theme">
+                            <i data-lucide="twitter" class="w-4 h-4 text-gray-700"></i>
+                        </a>
+                        <a href="#" class="neuro-button neuro-press-hover rounded-full w-10 h-10 flex items-center justify-center bg-theme">
+                            <i data-lucide="instagram" class="w-4 h-4 text-gray-700"></i>
+                        </a>
+                        <a href="#" class="neuro-button neuro-press-hover rounded-full w-10 h-10 flex items-center justify-center bg-theme">
+                            <i data-lucide="github" class="w-4 h-4 text-gray-700"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
